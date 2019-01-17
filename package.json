@@ -1,0 +1,27 @@
+{
+  "name": "help-ive-taken-x",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/kahu-2019/help-ive-taken-x.git",
+  "author": "HITX",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "nodemon": "^1.18.9"
+  },
+  "script": {
+    "debug": "nodemon --inspect index --ignore data.json",
+    "test": "jest --watchAll --noStackTrace ",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "handlebars": "^4.0.12",
+    "supertest": "^3.4.1"
+  },
+  "jest": {
+    "watchPathIgnorePatterns": [
+      "data.json"
+    ]
+  }
+}
