@@ -11,7 +11,15 @@
 
   main{
     display: grid;
-    grid-template: "poison1 poison2 poison3 poison4" 25%
-      "poison5 poison6 nopoison addpoison" 25%
-      
+    grid-template: "poison1 poison2 poison3 poison4" 150px
+      "poison5 poison6 nopoison addpoison" 150px
+      / 25% 25% 25% 25%;
+
+  }
+
+  /* Typography */
+
+  header h1{
+    color: rgb(112, 5, 5);
+    font-size: 1.5em;
   }
