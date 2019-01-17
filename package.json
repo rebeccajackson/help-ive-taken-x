@@ -7,7 +7,8 @@
   "license": "MIT",
   "devDependencies": {
     "jest": "^23.6.0",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.9",
+    "supertest": "^3.4.1"
   },
   "scripts": {
     "debug": "nodemon --inspect index --ignore data.json",
@@ -16,8 +17,8 @@
   },
   "dependencies": {
     "express": "^4.16.4",
-    "handlebars": "^4.0.12",
-    "supertest": "^3.4.1"
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.12"
   },
   "jest": {
     "watchPathIgnorePatterns": [
