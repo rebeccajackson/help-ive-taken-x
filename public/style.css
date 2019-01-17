@@ -11,8 +11,8 @@ body{
 
 main{
   display: grid;
-  grid-template: "poison1 poison2 poison3 poison4" 150px
-    "poison5 poison6 nopoison addpoison" 150px
+  grid-template: "mortein pest-off fecal-matter dont-recall" 150px
+    "paint pull-request nopoison addpoison" 150px
   / 25% 25% 25% 25%;
 
 }
@@ -28,11 +28,8 @@ header h1{
 
   /* Images */
   #main-image{
-    width: 7em;
-    height: 7em;
-    margin: 10px auto;
-    background-color:white;
-    text-align: center;
+    width: 40px;
+    height: 40px;
   }
 
   #view-image{
