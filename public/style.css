@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  }
+
+  body{
+    background-color: rgb(17, 3, 3);
+  }
+
+  main{
+    display: grid;
+    grid-template: "poison1 poison2 poison3 poison4" 25%
+      "poison5 poison6 nopoison addpoison" 25%
+      
+  }
