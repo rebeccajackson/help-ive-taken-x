@@ -7,7 +7,7 @@ router.get('/', function (req, res) {
 })
 
 router.get('/poisons', function (req, res) {
-    fs.readFile('./data.json', function (err, data) {
+    fs.readFile('./data.json', 'utf8', function (err, data) {
         if (err) return res.status(500).send("An error has occured :'(")
 
         var poisonsObj = JSON.parse(data)
@@ -19,10 +19,21 @@ router.get('/poisons/:id', function (req, res) {
     fs.readFile('./data.json', 'utf8', function (err, data) {
         if (err) return res.status(500).send("An error has occured :'(")
 
-
+        var id = Number(req.params.id)
         var poisonsObj = JSON.parse(data)
-        console.log(poisonsObj)
-        res.render('poisons/poison', poisonsObj)
+        var poison = poisonsObj.poisons.find((poison) => poison.id === id)
+        res.render('poison', poison)
+    })
+})
+
+router.get('/poisons/edit/:id', function (req, res) {
+    fs.readFile('./data.json', 'utf8', function (err, data) {
+        if (err) return res.status(500).send("An eoor has occured :'(")
+
+        var id = Number(req.params.id)
+        var poisonsObj = JSON.parse(data)
+        var poison = poisonsObj.poisons.find((poison) => poison.id === id)
+        res.render('poisons/edit', poison)
     })
 })
 
