@@ -1,0 +1,73 @@
+{
+    "poisons": [
+        {
+            "id": 1,
+            "name": "Mortein",
+            "symptoms": [
+                "melody stuck in head",
+                "experimental teen drug, not reccommended",
+                "the real gateway drug",
+                "repeated walking into windows",
+                "occasional dead fly"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Pest Off",
+            "symptoms": [
+                "lack of mice",
+                "foaming the mouth",
+                "strong desire for cheese",
+                "oddly attracted to holes in walls"
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Fecal matter",
+            "symptoms": [
+                "potty mouth, litterally",
+                "friendly flies",
+                "bad taste in mouth",
+                "good gut bacteria",
+                "end to end service",
+                "weet-bix tastes better"
+            ]
+        },
+        {
+            "id": 4,
+            "name": "dont recall",
+            "symptoms": [
+                "song stuck in head",
+                "internal mereacci band",
+                "find yourself in any nearby conga line",
+                "instantly hilarious"
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Paint",
+            "symptoms": [
+                "colourful teeth",
+                "breaks down racial issues",
+                "adds racial issues",
+                "unfinished DIY project",
+                "tie-dyed toiletbowl",
+                "bob ross"
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Pull request",
+            "symptoms": [
+                "merge to master",
+                "callbacks??",
+                "feedback",
+                "Async",
+                "downward dog",
+                "ubuntu",
+                "handlebars :)",
+                "group projects"
+            ]
+        }
+    ]
+}
