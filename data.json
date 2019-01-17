@@ -17,6 +17,7 @@
       "id": 2,
       "name": "Pest Off",
       "class":"pest-off",
+      "image": "/images/poison2.png",
       "symptoms": [
         "lack of mice",
         "foaming the mouth",
@@ -28,6 +29,7 @@
       "id": 3,
       "name": "Fecal matter",
       "class":"fecal-matter",
+      "image": "/images/poison3.png",
       "symptoms": [
         "potty mouth, litterally",
         "friendly flies",
@@ -41,6 +43,7 @@
       "id": 4,
       "name": "Don't recall",
       "class":"dont-recall",
+      "image": "/images/poison4.png",
       "symptoms": [
         "song stuck in head",
         "internal mereacci band",
@@ -52,6 +55,7 @@
       "id": 5,
       "name": "Paint",
       "class":"paint",
+      "image": "/images/poison5.png",
       "symptoms": [
         "colourful teeth",
         "breaks down racial issues",
@@ -65,6 +69,7 @@
       "id": 6,
       "name": "Pull request",
       "class":"pull-request",
+      "image": "/images/poison6.png",
       "symptoms": [
         "merge to master",
         "callbacks??",

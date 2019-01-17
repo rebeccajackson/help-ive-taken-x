@@ -1,4 +1,22 @@
-  <main class="{{class}}">
+{{#each poisons}}
+  <div class="{{class}}">
     <img class="main-image" src="{{image}}" alt="Type of poison">
-    <p class="home-label"></p>
-  </main>
+    <p class="home-label">
+      {{name}}
+    </p>
+  </div>
+  {{/each}}
+  
+  <div class="nopoison">
+    <img class="main-image" src="{{image}}" alt="Type of poison">
+    <p class="home-label">
+      
+    </p>
+  </div>
+
+  <div class="addpoison">
+   <img class="main-image" src="" alt="Blank poison">
+   <p class="home-label">
+
+    </p>
+  </div>
