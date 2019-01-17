@@ -6,7 +6,24 @@
   }
 
 body{
-  background-color: rgb(17, 3, 3);
+  background-color: rgb(2, 0, 0);
+  display: grid;
+  grid-template: 'header' 70px
+    'main' auto
+    'footer' 70px
+  /90%;
+}
+
+header{
+  grid-area: header
+}
+
+main{
+  grid-area: main;
+}
+
+footer{
+  grid-area: footer;
 }
 
 main{
@@ -14,16 +31,46 @@ main{
   grid-template: "mortein pest-off fecal-matter dont-recall" 150px
     "paint pull-request nopoison addpoison" 150px
   / 25% 25% 25% 25%;
-
+  grid-gap: 5px;
 }
 
+#mortein{
+  grid-area: mortein;
+}
 
+#pest-off{
+  grid-area: pest-off;
+}
+
+#fecal-matter{
+  grid-area: fecal-matter;
+}
+
+#dont-recall{
+  grid-area: dont-recall;
+}
+
+#paint{
+  grid-area: paint;
+}
+
+#pull-request{
+  grid-area: pull-request;
+}
+
+#nopoison{
+  grid-area: nopoison;
+}
+
+#addpoison{
+  grid-area: addpoison;
+}
 
 /* Typography */
 
 header h1{
-  color: rgb(112, 5, 5);
-  font-size: 1.5em;
+  color: rgb(168, 5, 5);
+  font-size: 2em;
 }
 
   /* Images */
