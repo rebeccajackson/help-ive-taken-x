@@ -5,21 +5,41 @@
   border: 0;
   }
 
-  body{
-    background-color: rgb(17, 3, 3);
+body{
+  background-color: rgb(17, 3, 3);
+}
+
+main{
+  display: grid;
+  grid-template: "poison1 poison2 poison3 poison4" 150px
+    "poison5 poison6 nopoison addpoison" 150px
+  / 25% 25% 25% 25%;
+
+}
+
+
+
+/* Typography */
+
+header h1{
+  color: rgb(112, 5, 5);
+  font-size: 1.5em;
+}
+
+  /* Images */
+  #main-image{
+    width: 7em;
+    height: 7em;
+    margin: 10px auto;
+    background-color:white;
+    text-align: center;
   }
 
-  main{
-    display: grid;
-    grid-template: "poison1 poison2 poison3 poison4" 150px
-      "poison5 poison6 nopoison addpoison" 150px
-      / 25% 25% 25% 25%;
-
-  }
-
-  /* Typography */
-
-  header h1{
-    color: rgb(112, 5, 5);
-    font-size: 1.5em;
+  #view-image{
+    border-radius: 25px;
+    border: 2px solid rgb(15, 27, 49);
+    padding: 20px;     
+    width: 7em;
+    height: 7em;
+    margin: auto auto;
   }
