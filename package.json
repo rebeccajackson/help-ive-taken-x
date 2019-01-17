@@ -9,7 +9,7 @@
     "jest": "^23.6.0",
     "nodemon": "^1.18.9"
   },
-  "script": {
+  "scripts": {
     "debug": "nodemon --inspect index --ignore data.json",
     "test": "jest --watchAll --noStackTrace ",
     "start": "node index.js"
