@@ -6,18 +6,31 @@
   }
 
 body{
-  background-color: rgb(2, 0, 0);
+  background-color: rgb(39, 38, 38);
   display: grid;
-  grid-template: 'header' 70px
-    'main' auto
-    'footer' 70px
-  /90%;
+  grid-template: '. header .' 70px
+    '. main .' auto
+    '. footer .' 70px
+  /5% 90% 5%;
   color: white;
+  grid-gap: 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.poison-page{
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template: '. header .' 70px
+    ". view-poison ." auto
+    '.footer .' 70px
+  / 5% 90% 5%;
+  grid-gap: 5px;
+}
+
 header{
-  grid-area: header
+  grid-area: header;
+  padding: 10px none;
 }
 
 main{
@@ -26,15 +39,25 @@ main{
 
 footer{
   grid-area: footer;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
 }
 
 main{
+  width: 100%;
   display: grid;
-  grid-template: "mortein pest-off fecal-matter dont-recall" 150px
-    "paint pull-request nopoison addpoison" 150px
-  / 25% 25% 25% 25%;
+  grid-template: ". mortein pest-off fecal-matter dont-recall ." 250px
+    ". paint pull-request nopoison addpoison ." 250px
+  / auto 250px 250px 250px 250px auto;
   grid-gap: 5px;
 }
+
+
+
 
 .mortein{
   grid-area: mortein;
@@ -67,6 +90,12 @@ main{
 .addpoison{
   grid-area: addpoison;
 }
+.main-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 footer{
   display: flex;
@@ -74,15 +103,54 @@ footer{
   align-items: center;
 }
 
+
+
+.view-poison{
+  grid-area: view-poison;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Typography */
 
 header h1{
   color: rgb(168, 5, 5);
-  font-size: 2em;
+  font-size: 3em;
+  text-align: center;
+  text-justify: inter-word;
+}
+.x{
+  font-weight: 700;
+  font-size: 1.5em;
+  color: rgb(168, 5, 5);
+}
+
+.x:hover{
+  color: dimgray;
+}
+
+main, p{
+  padding: 0.5em;
+}
+
+a{
+  text-decoration: none;
 }
 
 footer, h3{
+  font-size: 1em;
   color: white;
+  text-align: left;
+}
+
+footer,a {
+  color: white;
+}
+
+footer a:hover{
+  color: dimgray;
 }
 
 /* Images */
@@ -91,21 +159,22 @@ footer, h3{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 1em;
-  width: 70px;
-  height: 70px;
+  width: 70%;
+  height: 70%;
+  border-radius: 100px;
+  background-color: white;
 }
 
 .main-poison{
-  width: 100%;
-  height: 100%;
+  width: 100px;
+  height: 100px;
 }
 
 .view-image{
   border-radius: 25px;
   border: 2px solid rgb(15, 27, 49);
   padding: 20px;     
-  width: 7em;
-  height: 7em;
+  width: 70px;
+  height: 70px;
   margin: auto auto;
 }

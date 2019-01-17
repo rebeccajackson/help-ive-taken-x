@@ -1,11 +1,13 @@
 
-<div class="view-poison">
-  <img class="viewimage" src="{{image}}" alt="Picture of death">
-  <div class="symptoms">
-    {{#each symptoms}}
-      <p>{{this}}</p>
-    {{/each}}
+<div class="poison-page">
+{{>header}}
+  <div class="view-poison">
+      <img class="viewimage" src="{{image}}" alt="Picture of death">
+      <div class="symptoms">
+        {{#each symptoms}}
+          <p>{{this}}</p>
+        {{/each}}
+      </div>
   </div>
-
+  {{>footer}}
 </div>
-{{>footer}}
