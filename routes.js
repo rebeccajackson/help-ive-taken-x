@@ -26,14 +26,40 @@ router.get('/poisons/:id', function (req, res) {
     })
 })
 
-router.get('/poisons/edit/:id', function (req, res) {
-    fs.readFile('./data.json', 'utf8', function (err, data) {
-        if (err) return res.status(500).send("An eoor has occured :'(")
+router.get('/poisons/edit', function (req, res) {
+    // fs.readFile('./data.json', 'utf8', function (err, data) {
+    //     if (err) return res.status(500).send("An error has occured :'(")
 
-        var id = Number(req.params.id)
-        var poisonsObj = JSON.parse(data)
-        var poison = poisonsObj.poisons.find((poison) => poison.id === id)
-        res.render('poisons/edit', poison)
+    //     var id = Number(req.params.id)
+    //     var poisonsObj = JSON.parse(data)
+    //     var poison = poisonsObj.poisons.find((poison) => poison.id === id)
+    //     res.render('poisons/edit', id)
+    var newPoisonId = (poisonsObj.poisons.length + 1);
+    res.render('poisons/edit', newPoisonId)
+})
+
+
+router.post('/poisons/edit', function (req, res) {
+    fs.readFile('./data.json', 'utf8', function (err, data) {
+        if (err) return res.status(500).send("An error has occured :'(")
+
+        // var id = Number(req.params.id)
+        // var poisonsObj = JSON.parse(data)
+        // var poison = poisonsObg.poison.find((poison) => poison.id === id)
+        // res.render('poisons/edit', poison)
+
+        var newClass = req.body.name.replace(/\s+/g, '-').toLowerCase()
+        console.log(newClass)
+        // var newPoisonId =(poisonsObj.poisons.length +1);
+        var newPoison = {
+            id: newPoisonId,
+            name: req.body.name,
+            class: newClass,
+            image: '/images/default.png',
+            symptoms: [] // Will finish this once i see what format the form returns the list in
+        }
+
+        poisonsObj.poisons.push(newPoison)
     })
 })
 
