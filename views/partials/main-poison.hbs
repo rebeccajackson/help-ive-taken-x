@@ -1,7 +1,9 @@
 {{#each poisons}}
   <div class="{{class}}">
     <div class="main-image" >
-      <img src="{{image}}" alt="Type of poison">
+      <a href="/poison/{{id}}">
+        <img class="main-poison" src="{{image}}" alt="Type of poison">
+      </a>
     </div>
     
     <p class="home-label">
@@ -16,7 +18,9 @@
 
   <div class=" main-image addpoison">
     <div class="main-image">
-      <img  src="" alt="Blank poison">
+     <a href="/edit.hbs">
+     <img class="main-poison" src="/images/addpoison.jpeg" alt="Blank poison">
+     </a> 
     </div>
    
    <p class="home-label">

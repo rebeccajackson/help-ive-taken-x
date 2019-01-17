@@ -12,6 +12,8 @@ body{
     'main' auto
     'footer' 70px
   /90%;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header{
@@ -34,36 +36,42 @@ main{
   grid-gap: 5px;
 }
 
-#mortein{
+.mortein{
   grid-area: mortein;
 }
 
-#pest-off{
+.pest-off{
   grid-area: pest-off;
 }
 
-#fecal-matter{
+.fecal-matter{
   grid-area: fecal-matter;
 }
 
-#dont-recall{
+.dont-recall{
   grid-area: dont-recall;
 }
 
-#paint{
+.paint{
   grid-area: paint;
 }
 
-#pull-request{
+.pull-request{
   grid-area: pull-request;
 }
 
-#nopoison{
+.nopoison{
   grid-area: nopoison;
 }
 
-#addpoison{
+.addpoison{
   grid-area: addpoison;
+}
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Typography */
@@ -73,17 +81,31 @@ header h1{
   font-size: 2em;
 }
 
-  /* Images */
-  #main-image{
-    width: 40px;
-    height: 40px;
-  }
+footer, h3{
+  color: white;
+}
 
-  #view-image{
-    border-radius: 25px;
-    border: 2px solid rgb(15, 27, 49);
-    padding: 20px;     
-    width: 7em;
-    height: 7em;
-    margin: auto auto;
-  }
+/* Images */
+.main-image{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+  width: 70px;
+  height: 70px;
+}
+
+.main-poison{
+  width: 100%;
+  height: 100%;
+}
+
+.view-image{
+  border-radius: 25px;
+  border: 2px solid rgb(15, 27, 49);
+  padding: 20px;     
+  width: 7em;
+  height: 7em;
+  margin: auto auto;
+}
