@@ -19,9 +19,7 @@ router.get('/poisons/:id', function (req, res) {
     fs.readFile('./data.json', 'utf8', function (err, data) {
         if (err) return res.status(500).send("An error has occured :'(")
 
-
         var poisonsObj = JSON.parse(data)
-        console.log(poisonsObj)
         res.render('poisons/poison', poisonsObj)
     })
 })
