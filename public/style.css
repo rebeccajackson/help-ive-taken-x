@@ -27,6 +27,16 @@ body{
   / 5% 90% 5%;
   grid-gap: 5px;
 }
+.editpage{
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template: '. header .' 90px
+    ". form ." auto
+    '.footer .' 70px
+  / 5% 90% 5%;
+  grid-gap: 5px;
+}
 
 header{
   grid-area: header;
@@ -114,9 +124,10 @@ footer{
 }
 
 .form{
+  grid-area: form;
   display: flex;
   flex-direction: column;
-  align-items: space-evenly;
+  align-items: center;
   justify-content: center;
 }
 
@@ -200,8 +211,8 @@ button {
   display: inline-block;
   border: none;
   border-radius: 5px;
-  padding: 1rem 2rem;
-  margin: 0;
+  padding: 1em;
+  margin: 1em;
   text-decoration: none;
   background: dimgray;
   color: #ffffff;

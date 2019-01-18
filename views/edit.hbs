@@ -1,26 +1,20 @@
-
+<div class="editpage">
 {{>header}}
 <form class="form" action="/edit" method="post">
    
     <img class="viewimage" src="/images/poison8.png" alt="?">
 
     <div class="edit-name">
-          <label for="name" class="form-item">
-            Name:
-            <input type="text" name="name" value="">
-        </label>
-
+        <input type="text" name="name" value="Name:">
     </div>
 
     <div class="edit-symptoms">
-        <label for="symptoms" class="form-item">
-            Symptoms:
-            <input type="text" name="symptoms" value="">
-        </label>
-        
+        <input type="text" name="symptoms" value="Symptoms:">
         <input class="button" type="submit" name="" value="Submit">
 
     </div>  
 
 </form>
 {{>footer}}
+
+</div>
