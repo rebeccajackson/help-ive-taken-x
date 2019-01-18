@@ -15,6 +15,19 @@ router.get('/poisons', function (req, res) {
     })
 })
 
+router.get('/poisons/edit', function (req, res) {
+    
+     fs.readFile('./data.json', 'utf8', function (err, data) {
+         if (err) return res.status(500).send("An error has occured :'(")
+        
+         var id = Number(req.params.id)
+         var poisonsObj = JSON.parse(data)
+         var poison = poisonsObj.poisons.find((poison) => poison.id === id)
+         res.render('edit')
+ 
+     })
+ })
+
 router.get('/poisons/:id', function (req, res) {
     fs.readFile('./data.json', 'utf8', function (err, data) {
         if (err) return res.status(500).send("An error has occured :'(")
@@ -26,23 +39,14 @@ router.get('/poisons/:id', function (req, res) {
     })
 })
 
-router.get('/poison/edit', function (req, res) {
-    // fs.readFile('./data.json', 'utf8', function (err, data) {
-    //     if (err) return res.status(500).send("An error has occured :'(")
 
-    //     var id = Number(req.params.id)
-    //     var poisonsObj = JSON.parse(data)
-    //     var poison = poisonsObj.poisons.find((poison) => poison.id === id)
-    //     res.render('poisons/edit', id)
-    var newPoisonId = (poisonsObj.poisons.length + 1);
-    res.render('/poison/edit', newPoisonId)
-})
 
 
 router.post('/edit', function (req, res) {
     fs.readFile('./data.json', 'utf8', function (err, data) {
         if (err) return res.status(500).send("An error has occured :'(")
 
+        var newPoisonId = (poisonsObj.poisons.length + 1)
         // var id = Number(req.params.id)
         // var poisonsObj = JSON.parse(data)
         // var poison = poisonsObg.poison.find((poison) => poison.id === id)
@@ -60,6 +64,7 @@ router.post('/edit', function (req, res) {
         }
 
         poisonsObj.poisons.push(newPoison)
+        res.redirect('/poisons')
     })
 })
 
