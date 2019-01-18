@@ -16,7 +16,7 @@
     {
       "id": 2,
       "name": "Pest Off",
-      "class":"pest-off",
+      "class": "pest-off",
       "image": "/images/poison2.png",
       "symptoms": [
         "lack of mice",
@@ -28,7 +28,7 @@
     {
       "id": 3,
       "name": "Fecal matter",
-      "class":"fecal-matter",
+      "class": "fecal-matter",
       "image": "/images/poison3.png",
       "symptoms": [
         "potty mouth, litterally",
@@ -42,7 +42,7 @@
     {
       "id": 4,
       "name": "Don't recall",
-      "class":"dont-recall",
+      "class": "dont-recall",
       "image": "/images/poison4.png",
       "symptoms": [
         "song stuck in head",
@@ -54,7 +54,7 @@
     {
       "id": 5,
       "name": "Paint",
-      "class":"paint",
+      "class": "paint",
       "image": "/images/poison5.png",
       "symptoms": [
         "colourful teeth",
@@ -68,7 +68,7 @@
     {
       "id": 6,
       "name": "Pull request",
-      "class":"pull-request",
+      "class": "pull-request",
       "image": "/images/poison6.png",
       "symptoms": [
         "merge to master",
@@ -79,6 +79,15 @@
         "ubuntu",
         "handlebars :)",
         "group projects"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "kevin hart",
+      "class": "kevin-hart",
+      "image": "/images/poison8.png",
+      "symptoms": [
+        "low"
       ]
     }
   ]

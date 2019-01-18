@@ -58,15 +58,15 @@ router.post('/edit', function (req, res) {
             id: newPoisonId,
             name: req.body.name,
             class: newClass,
-            image: '/images/default.png',
+            image: '/images/poison8.png',
             symptoms: symptoms
         }
 
         poisonsObj.poisons.push(newPoison)
-        fs.writeFile('./data', JSON.stringify(data), (err) => {
+        fs.writeFile('./data.json', JSON.stringify(poisonsObj, null, 2), (err) => {
             if (err) return res.status(500).send("An error has occured :'(")
         })
-        
+
         res.redirect('/poisons')
     })
 })
