@@ -47,22 +47,26 @@ router.post('/edit', function (req, res) {
         if (err) return res.status(500).send("An error has occured :'(")
         var poisonsObj = JSON.parse(data)
         var newPoisonId = (poisonsObj.poisons.length + 1)
-        // var id = Number(req.params.id)
-        
-        // var poison = poisonsObg.poison.find((poison) => poison.id === id)
-        // res.render('poisons/edit', poison)
+
+        console.log(req.body)
 
         var newClass = req.body.name.replace(/\s+/g, '-').toLowerCase()
-        // var newPoisonId =(poisonsObj.poisons.length +1);
+        var symptoms = [];
+        symptoms.push(req.body.symptoms)
+
         var newPoison = {
             id: newPoisonId,
             name: req.body.name,
             class: newClass,
             image: '/images/default.png',
-            symptoms: [] // Will finish this once i see what format the form returns the list in
+            symptoms: symptoms
         }
 
         poisonsObj.poisons.push(newPoison)
+        fs.writeFile('./data', JSON.stringify(data), (err) => {
+            if (err) return res.status(500).send("An error has occured :'(")
+        })
+        
         res.redirect('/poisons')
     })
 })
