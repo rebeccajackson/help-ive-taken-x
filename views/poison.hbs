@@ -2,7 +2,9 @@
 <div class="poison-page">
 {{>header}}
   <div class="view-poison">
-      <img class="viewimage" src="{{image}}" alt="Picture of death">
+      <div>
+        <img class="viewimage" src="{{image}}" alt="Picture of death">
+      </div>
       <div class="symptoms">
         {{#each symptoms}}
           <p>{{this}}</p>

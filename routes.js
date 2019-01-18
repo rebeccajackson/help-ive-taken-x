@@ -26,7 +26,7 @@ router.get('/poisons/:id', function (req, res) {
     })
 })
 
-router.get('/poisons/edit', function (req, res) {
+router.get('/poison/edit', function (req, res) {
     // fs.readFile('./data.json', 'utf8', function (err, data) {
     //     if (err) return res.status(500).send("An error has occured :'(")
 
@@ -35,11 +35,11 @@ router.get('/poisons/edit', function (req, res) {
     //     var poison = poisonsObj.poisons.find((poison) => poison.id === id)
     //     res.render('poisons/edit', id)
     var newPoisonId = (poisonsObj.poisons.length + 1);
-    res.render('poisons/edit', newPoisonId)
+    res.render('/poison/edit', newPoisonId)
 })
 
 
-router.post('/poisons/edit', function (req, res) {
+router.post('/edit', function (req, res) {
     fs.readFile('./data.json', 'utf8', function (err, data) {
         if (err) return res.status(500).send("An error has occured :'(")
 
