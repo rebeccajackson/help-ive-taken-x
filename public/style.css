@@ -32,6 +32,9 @@ header{
   grid-area: header;
   margin: 10px none;
   background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 main{
@@ -110,6 +113,13 @@ footer{
   justify-content: center;
 }
 
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
+  justify-content: center;
+}
+
 /* Typography */
 
 header h1{
@@ -120,12 +130,18 @@ header h1{
 }
 .x{
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 3.5em;
+  padding-left: 15px;
   color: rgb(168, 5, 5);
+  transition: background 250ms ease-in-out, 
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .x:hover{
   color: dimgray;
+  font-size: 4.5em;
 }
 
 main, p{
@@ -137,7 +153,7 @@ a{
 }
 
 .syptoms, p{
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 footer, h3{
@@ -160,8 +176,8 @@ footer a:hover{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 70%;
-  height: 70%;
+  width: 80%;
+  height: 80%;
   border-radius: 100px;
   background-color: white;
 }
@@ -171,15 +187,45 @@ footer a:hover{
   height: 100px;
 }
 
-.poison-image-box{
-  width: 7em;
-  height: 7em;
+.poison-image-box, .viewimage{
+  width: 350px;
+  height: 350px;
 }
 
 .viewimage{
   border-radius: 300px;     
-
 }
 
+button {
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: dimgray;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, 
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
 
+button:hover,
+button:focus {
+  background: dimgray;
+}
+
+button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+button:active {
+  transform: scale(0.99);
+}
 
