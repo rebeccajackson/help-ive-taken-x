@@ -1,14 +1,15 @@
 
+{{>header}}
 <form class="form" action="/edit" method="post">
    
-        <img src="/images/default.png" alt="?">
-   <label for="name" class="form-item">
+    <img class="viewimage" src="/images/poison8.png" alt="?">
+
+    <div class="edit-name">
+          <label for="name" class="form-item">
             Name:
             <input type="text" name="name" value="">
         </label>
 
-    <div class="edit-name">
-        
     </div>
 
     <div class="edit-symptoms">
@@ -16,9 +17,10 @@
             Symptoms:
             <input type="text" name="symptoms" value="">
         </label>
-    </div>
+        
+        <input class="button" type="submit" name="" value="Submit">
 
-    <div>
-        <input type="submit" name="" value="Submit">
-    </div>
+    </div>  
+
 </form>
+{{>footer}}
