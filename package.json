@@ -18,7 +18,7 @@
   "dependencies": {
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
-    "handlebars": "^4.0.14"
+    "handlebars": "^4.5.3"
   },
   "jest": {
     "watchPathIgnorePatterns": [
