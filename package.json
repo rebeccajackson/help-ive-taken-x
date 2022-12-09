@@ -16,7 +16,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.14"
   },
